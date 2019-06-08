@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<tomcat-users>
-<role rolename="user"/>
-<user password="amogh" roles="user" username="amogh"/>
-<role rolename="test"/>
-<user password="test" roles="test" username="test"/>
-</tomcat-users>

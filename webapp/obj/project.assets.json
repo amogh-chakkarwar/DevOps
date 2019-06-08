@@ -12078,11 +12078,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\DevOps\\Midterm\\DevOps\\DevOps.csproj",
+      "projectUniqueName": "C:\\DevOps\\Midterm\\DevOps\\webapp\\DevOps.csproj",
       "projectName": "DevOps",
-      "projectPath": "C:\\DevOps\\Midterm\\DevOps\\DevOps.csproj",
+      "projectPath": "C:\\DevOps\\Midterm\\DevOps\\webapp\\DevOps.csproj",
       "packagesPath": "C:\\Users\\Amogh\\.nuget\\packages\\",
-      "outputPath": "C:\\DevOps\\Midterm\\DevOps\\obj\\",
+      "outputPath": "C:\\DevOps\\Midterm\\DevOps\\webapp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

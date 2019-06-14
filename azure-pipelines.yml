@@ -20,8 +20,8 @@ variables:
 
 steps:
 - task: DotNetCoreCLI@2
-  displayName: Build
+  displayName: Publish
   inputs:
-    command: build
+    command: publish
     projects: '**/*.csproj'
     arguments: '--configuration Release' # Update this to match your need

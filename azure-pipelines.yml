@@ -35,7 +35,7 @@ steps:
     destinationFolder: '/publish'
     cleanDestinationFolder: true
   
-- script: cd ~/publish && pwd
+- script: pwd
   displayName: Get the location
 
 - task: CopyFiles@2

@@ -34,6 +34,9 @@ steps:
     # destinationFolder: '/home/vsts/work/1/s/mysong/bin/Release/netcoreapp2.1/publish'
     destinationFolder: '/publish'
     cleanDestinationFolder: true
+  
+- script: cd ~/publish && pwd
+  displayName: Get the location
 
 - task: CopyFiles@2
   displayName: 'Copy Files to: $(Build.ArtifactStagingDirectory)'

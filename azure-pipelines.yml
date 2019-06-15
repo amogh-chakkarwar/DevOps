@@ -40,7 +40,6 @@ steps:
   inputs:
     Contents: |
      /publish/**/*
-     /home/vsts/work/1/s/Powershell/*
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
 # Archive Files

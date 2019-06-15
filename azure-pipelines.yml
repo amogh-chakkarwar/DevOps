@@ -42,10 +42,12 @@ steps:
   displayName: 'Copy Files to: $(Build.ArtifactStagingDirectory)'
   inputs:
     Contents: |
-     /**/publish/**/*
      /home/vsts/work/1/s/*.ps1
      /home/vsts/work/1/s/appspec.yml
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
+
+- script: ls -al
+  displayName: Get the files
 
 # Archive Files
 # Compress files into .7z, .tar.gz, or .zip.

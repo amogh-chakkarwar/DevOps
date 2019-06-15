@@ -66,12 +66,23 @@ steps:
 #     targetFolder: 'example_app.zip'
 #     filesAcl: 'bucket-owner-full-control'
 
-- task: S3Upload@1
-  inputs:
-    awsCredentials: 'AmoghAWS'
-    regionName: 'us-east-1'
-    bucketName: 'amoghdata351256'
-    sourceFolder: 'example_app.zip'
-    globExpressions: '**'
-    filesAcl: 'bucket-owner-full-control'
+# - task: S3Upload@1
+#   inputs:
+#     awsCredentials: 'AmoghAWS'
+#     regionName: 'us-east-1'
+#     bucketName: 'amoghdata351256'
+#     sourceFolder: 'example_app.zip'
+#     globExpressions: '**'
+#     filesAcl: 'bucket-owner-full-control'
 
+- script: aws configure set aws_access_key_id ${aws_access_key_id}
+  displayName: Set Aceess Key
+
+- script: aws configure set aws_secret_access_key ${aws_secret_access_key}
+  displayName: Set Secret Key
+
+- script: aws configure set default.region ${AWS_REGION}
+  displayName: Set region
+
+- script: aws s3 cp example_app.zip s3://amoghdata351256
+  displayName: Upload to S3

@@ -31,8 +31,8 @@ steps:
 - task: ExtractFiles@1
   inputs:
     archiveFilePatterns: '/home/vsts/work/1/s/mysong/bin/Release/netcoreapp2.1/publish.zip' 
-    destinationFolder: '$(Build.ArtifactStagingDirectory)'
-    #cleanDestinationFolder: true
+    destinationFolder: '/home/vsts/work/1/s/mysong/bin/Release/netcoreapp2.1/publish'
+    cleanDestinationFolder: true
 
 # - task: CopyFiles@2
 #   displayName: 'Copy Files to: $(Build.ArtifactStagingDirectory)'

@@ -30,5 +30,5 @@ steps:
   displayName: 'Copy Files to: $(Build.ArtifactStagingDirectory)'
   inputs:
     Contents: |
-     /home/vsts/work/1/s/mysong/
+     /home/vsts/work/1/s/mysong/**/*
     TargetFolder: '$(Build.ArtifactStagingDirectory)'

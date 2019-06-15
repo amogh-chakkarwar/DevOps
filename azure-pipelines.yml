@@ -26,12 +26,20 @@ steps:
     projects: '**/*.csproj'
     arguments: '--configuration Release' # Update this to match your need
 
-- task: CopyFiles@2
-  displayName: 'Copy Files to: $(Build.ArtifactStagingDirectory)'
+# Extract Files
+# Extract a variety of archive and compression files such as .7z, .rar, .tar.gz, and .zip.
+- task: ExtractFiles@1
   inputs:
-    Contents: |
-     /home/vsts/work/1/s/mysong/bin/Release/netcoreapp2.1/publish.zip
-    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+    archiveFilePatterns: '/home/vsts/work/1/s/mysong/bin/Release/netcoreapp2.1/publish.zip' 
+    destinationFolder: '$(Build.ArtifactStagingDirectory)'
+    #cleanDestinationFolder: true
+
+# - task: CopyFiles@2
+#   displayName: 'Copy Files to: $(Build.ArtifactStagingDirectory)'
+#   inputs:
+#     Contents: |
+#      /home/vsts/work/1/s/mysong/bin/Release/netcoreapp2.1/publish.zip
+#     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
 # Archive Files
 # Compress files into .7z, .tar.gz, or .zip.

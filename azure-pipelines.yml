@@ -20,8 +20,16 @@ variables:
 
 steps:
 - task: DotNetCoreCLI@2
-  displayName: Publish
+  displayName: Build
   inputs:
-    command: publish
+    command: build
     projects: '**/*.csproj'
     arguments: '--configuration Release' # Update this to match your need
+
+steps:
+- task: CopyFiles@2
+  displayName: 'Copy Files to: $(Build.ArtifactStagingDirectory)'
+  inputs:
+    Contents: |
+     /home/vsts/work/1/s/mysong/*
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'

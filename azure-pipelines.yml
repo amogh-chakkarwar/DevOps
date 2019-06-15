@@ -78,13 +78,13 @@ steps:
 - script: sudo apt-get install awscli
   displayName: Install awscli
 
-- script: aws configure set aws_access_key_id ${aws_access_key_id}
+- script: aws configure set aws_access_key_id $(aws_access_key_id)
   displayName: Set Aceess Key
 
-- script: aws configure set aws_secret_access_key ${aws_secret_access_key}
+- script: aws configure set aws_secret_access_key $(aws_secret_access_key)
   displayName: Set Secret Key
 
-- script: aws configure set default.region ${AWS_REGION}
+- script: aws configure set default.region $(AWS_REGION)
   displayName: Set region
 
 - script: aws s3 cp example_app.zip s3://amoghdata351256

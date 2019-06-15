@@ -34,12 +34,13 @@ steps:
     destinationFolder: '/home/vsts/work/1/s/mysong/bin/Release/netcoreapp2.1/publish'
     cleanDestinationFolder: true
 
-# - task: CopyFiles@2
-#   displayName: 'Copy Files to: $(Build.ArtifactStagingDirectory)'
-#   inputs:
-#     Contents: |
-#      /home/vsts/work/1/s/mysong/bin/Release/netcoreapp2.1/publish.zip
-#     TargetFolder: '$(Build.ArtifactStagingDirectory)'
+- task: CopyFiles@2
+  displayName: 'Copy Files to: $(Build.ArtifactStagingDirectory)'
+  inputs:
+    Contents: |
+     /home/vsts/work/1/s/mysong/bin/Release/netcoreapp2.1/publish/**/*
+     /home/vsts/work/1/s/Powershell/*
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
 # Archive Files
 # Compress files into .7z, .tar.gz, or .zip.

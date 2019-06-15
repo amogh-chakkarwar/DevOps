@@ -56,6 +56,16 @@ steps:
     #verbose: # Optional
     #quiet: # Optional
 
+# - task: S3Upload@1
+#   inputs:
+#     awsCredentials: 'AmoghAWS'
+#     regionName: 'us-east-1'
+#     bucketName: 'amoghdata351256'
+#     sourceFolder: 'example_app.zip'
+#     globExpressions: '**'
+#     targetFolder: 'example_app.zip'
+#     filesAcl: 'bucket-owner-full-control'
+
 - task: S3Upload@1
   inputs:
     awsCredentials: 'AmoghAWS'
@@ -63,15 +73,5 @@ steps:
     bucketName: 'amoghdata351256'
     sourceFolder: 'example_app.zip'
     globExpressions: '**'
-    targetFolder: 'example_app.zip'
     filesAcl: 'bucket-owner-full-control'
-
-# - task: S3Upload@1
-#   inputs:
-#     awsCredentials: 'AmoghAWS'
-#     regionName: 'us-east-1'
-#     bucketName: 'amoghdata351256'
-#     sourceFolder: '/home/vsts/work/1/s/example_app.zip'
-#     globExpressions: '**'
-#     filesAcl: 'bucket-owner-full-control'
 

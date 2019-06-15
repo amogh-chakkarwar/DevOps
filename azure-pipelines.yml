@@ -39,7 +39,7 @@ steps:
   displayName: 'Copy Files to: $(Build.ArtifactStagingDirectory)'
   inputs:
     Contents: |
-     /home/vsts/work/1/s/publish/**/*
+     /**/publish/**/*
      /home/vsts/work/1/s/*.ps1
      /home/vsts/work/1/s/appspec.yml
     TargetFolder: '$(Build.ArtifactStagingDirectory)'

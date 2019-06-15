@@ -31,14 +31,15 @@ steps:
 - task: ExtractFiles@1
   inputs:
     archiveFilePatterns: '/home/vsts/work/1/s/mysong/bin/Release/netcoreapp2.1/publish.zip' 
-    destinationFolder: '/home/vsts/work/1/s/mysong/bin/Release/netcoreapp2.1/publish'
+    # destinationFolder: '/home/vsts/work/1/s/mysong/bin/Release/netcoreapp2.1/publish'
+    destinationFolder: '/publish'
     cleanDestinationFolder: true
 
 - task: CopyFiles@2
   displayName: 'Copy Files to: $(Build.ArtifactStagingDirectory)'
   inputs:
     Contents: |
-     /home/vsts/work/1/s/mysong/bin/Release/netcoreapp2.1/publish/**/*
+     /publish/**/*
      /home/vsts/work/1/s/Powershell/*
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 

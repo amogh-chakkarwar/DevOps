@@ -1,11 +1,7 @@
-# CSYE 7220 - Summer-1 2019
-Amogh Chakkarwar
+# Building ASP.NET app using AZURE pipeline and deploying on AWS using CodeDeploy
 
-## Technology Stack
-1. .NET
-2. Azure
-3. AWS
-
+### AWS CloudFormation
+![CloudFormation](https://amoghdata351256.s3.amazonaws.com/AWS+Cloud+Formation.JPG)
 
 ## Build/Deploy Instructions
 1. Git clone the DevOps Repository 
